@@ -7872,16 +7872,25 @@ memory usage: 6.0+ MB
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=25bae745-5eb9-486c-af16-4f0517e3c3c1">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=4053f246-f885-4e53-b1eb-60b77b71d908">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>df.isnull().sum()</p>
+<h3 id="Understanding-the-Dataset-with-df.info()">Understanding the Dataset with <code>df.info()</code><a class="anchor-link" href="#Understanding-the-Dataset-with-df.info()">¶</a></h3><p>In cell 5, using <code>df.info()</code> on the dataset provides a concise overview of the dataset's structure and quality. Here's what it tells us:</p>
+<ul>
+<li><p><strong>Quickly checks for missing values</strong>: The output shows the number of non-null entries for each column compared to the total number of rows. This helps identify columns with missing data that may require cleaning or imputation.</p>
+</li>
+<li><p><strong>Shows data types</strong>: Each column’s data type (<code>int64</code>, <code>float64</code>, <code>object</code>, etc.) is displayed. Knowing whether a column is numeric or categorical is critical for analysis, as it helps determines which operations and visualizations are appropriate.</p>
+</li>
+<li><p><strong>Estimates memory usage</strong>: The summary includes memory usage of the dataset, which is helpful when working with large files to optimize performance and avoid potential memory issues.</p>
+</li>
+</ul>
 </div>
 </div>
 </div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs jp-mod-noInput" id="cell-id=228ccd70-b3e9-4e98-8ccb-55949f3f036a">
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs jp-mod-noInput" id="cell-id=d70911ac-33f2-4602-9b9c-ff32cc07f920">
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs jp-mod-noInput" id="cell-id=013c244c-108a-48df-a30a-9be9039a0554">
 </div>
