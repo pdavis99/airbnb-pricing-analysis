@@ -7878,13 +7878,25 @@ memory usage: 6.0+ MB
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Understanding-the-Dataset-with-df.info()">Understanding the Dataset with <code>df.info()</code><a class="anchor-link" href="#Understanding-the-Dataset-with-df.info()">¶</a></h3><p>In cell 5, using <code>df.info()</code> on the dataset provides a concise overview of the dataset's structure and quality. Here's what it tells us:</p>
+<h3 id="Exploring-the-Dataset">Exploring the Dataset<a class="anchor-link" href="#Exploring-the-Dataset">¶</a></h3><p>In cell 5, we used <code>df.info()</code> and <code>df.describe()</code> to get an overview of the Airbnb dataset's structure, quality, and numeric characteristics.</p>
+<h4 id="Using-df.info()">Using <code>df.info()</code><a class="anchor-link" href="#Using-df.info()">¶</a></h4><p><code>df.info()</code> provides a concise summary of the dataset. Here's what it reveals:</p>
 <ul>
-<li><p><strong>Quickly checks for missing values</strong>: The output shows the number of non-null entries for each column compared to the total number of rows. This helps identify columns with missing data that may require cleaning or imputation.</p>
+<li><p><strong>Checks for missing values</strong>: The output shows the number of non-null entries for each column compared to the total number of rows. This helps identify columns with missing data that may need to be cleaned or removed. In this dataset, the columns <code>last_review</code>, <code>reviews_per_month</code>, and <code>host_name</code> had over 30% missing values, so we chose to exclude them since they were not essential to the overall analysis. (see cell 6-8)</p>
 </li>
-<li><p><strong>Shows data types</strong>: Each column’s data type (<code>int64</code>, <code>float64</code>, <code>object</code>, etc.) is displayed. Knowing whether a column is numeric or categorical is critical for analysis, as it helps determines which operations and visualizations are appropriate.</p>
+<li><p><strong>Displays data types</strong>: Each column’s data type (<code>int64</code>, <code>float64</code>, <code>object</code>, etc.) is shown. Understanding whether a column is numeric or categorical is important because it determines which operations and visualizations are appropriate. Since most of our data consisted of floats and integers, box plots, histograms, and bar graphs were suitable for illustrating the findings.</p>
 </li>
-<li><p><strong>Estimates memory usage</strong>: The summary includes memory usage of the dataset, which is helpful when working with large files to optimize performance and avoid potential memory issues.</p>
+<li><p><strong>Estimates memory usage</strong>: The summary includes the dataset’s memory usage, which is useful when working with large files to ensure efficient performance and avoid potential memory issues.</p>
+</li>
+</ul>
+<h4 id="Using-df.describe()">Using <code>df.describe()</code><a class="anchor-link" href="#Using-df.describe()">¶</a></h4><p><code>df.describe()</code> provides a statistical summary of the numeric columns. Here's what it tells us:</p>
+<ul>
+<li><p><strong>Count of non-null values</strong>: Confirms the number of entries present for each numeric column.</p>
+</li>
+<li><p><strong>Measures of central tendency</strong>: Includes the mean and median (50th percentile), giving an idea of typical values in each column.</p>
+</li>
+<li><p><strong>Measures of spread</strong>: Includes standard deviation (<code>std</code>), minimum (<code>min</code>), maximum (<code>max</code>), and quartiles (25th and 75th percentiles), which help identify the variability in the data and detect potential outliers.</p>
+</li>
+<li><p><strong>Informs visualizations and analysis</strong>: Understanding the distribution of numeric data guides the choice of charts and statistical methods. For example, skewed distributions are better visualized with histograms or box plots, while evenly distributed data can be summarized with bar charts.</p>
 </li>
 </ul>
 </div>
