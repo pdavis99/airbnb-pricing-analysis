@@ -30,6 +30,11 @@ The purpose of this project is to understand what factors affect Airbnb prices i
 3. Created visualizations (bar charts, heat maps) using Matplotlib/Seaborn.  
 4. Compiled insights into a report for quick understanding.  
 
+## Getting Started
+1. Clone the repository: `git clone <repo_url>`  
+2. Install dependencies: `pip install -r requirements.txt`  
+3. Open the Jupyter Notebook: `jupyter notebook`
+
 ## Dataset Overview
 
 | id   | name                       | host_name   | neighbourhood_group | neighbourhood | room_type       | price |
